@@ -14,7 +14,7 @@ console.log(section_projects.style.paddingTop);
 
 // Get Header Section height
 // section_header.style.height = (vh_to_px - nav_height) + "px";
-section_header.style.height = vh_max + "vh";
+section_header.style.height = vh_max + "dvh";
 
 // Set Contact section padding
 section_contact.style.height = (vh_to_px - nav_height) + "px";
