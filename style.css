@@ -7,8 +7,10 @@ body {
 /* Navbar settings */
 .nav {
     position: -webkit-sticky;
-    position: absolute;
-    top:90vh;
+    position: sticky;
+    top:0;
+
+    /* margin-top:-10vh; */
 
     color:white;
     /* background-image: linear-gradient(to left, #706e66, #939088); */
@@ -17,18 +19,22 @@ body {
     display: flex;
     align-items: center;
 
-    /* transition-duration: 1.69s; */
+    transition-duration: 0.69s;
 }
 
 .scrolled {
     /* background-color: gray;  */
     color:white; background-image: linear-gradient(to right, rgb(56, 56, 56), rgb(56, 56, 56));
-    position: sticky; top:0;
-    /* transition: 1s ease-in-out; */
+    /* margin-top: 0; */
+    transition: 0.69s;
 }
 
 .logo {
     padding: 10px;
+}
+
+.dev-logo {
+    width:5vh; border-radius: 50%;
 }
 
 .navbar {
@@ -54,7 +60,7 @@ body {
 
 .navbar a, .navbar a:visited {
     text-decoration: none;
-    color:black;
+    color:white;
 }
 
 .contact, .contact a:visited {

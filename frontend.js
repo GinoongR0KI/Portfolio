@@ -66,15 +66,19 @@ function dropdown_display(target, state) {
 }
 
 // Scroll
+var navbar = document.getElementsByClassName("nav")[0];
+navbar.style.marginTop = -(nav_height) + "px";
+console.log(navbar.style.marginTop);
 function runOnScroll() {
-    if (document.documentElement.scrollTop > 200) {
-        var navbar = document.getElementsByClassName("nav")[0];
+    if (document.documentElement.scrollTop > 2) {
         navbar.classList.add("scrolled");
+        navbar.style.marginTop = 0 + "px";
         // document.getElementsByClassName("nav")[0].classList.add("scrolled");
         console.log("above");
     } else {
         document.getElementsByClassName("nav")[0].classList.remove("scrolled");
         console.log("below");
+        navbar.style.marginTop = -(nav_height) + "px";
     }
 }
 window.addEventListener("scroll", runOnScroll);
