@@ -9,6 +9,7 @@ var section_contact = document.getElementById("Contact");
 
 // Set the first section padding off by navbar height
 section_projects.style.paddingTop = nav_height + "px";
+section_projects.style.paddingBottom = nav_height + "px";
 console.log(nav_height);
 console.log(section_projects.style.paddingTop);
 

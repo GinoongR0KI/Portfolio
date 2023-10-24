@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="assets/images/GinoongR0KI Logo.png" type="image/x-icon">
 
     <title>Roque's Portfolio</title>
+
+    <script src="https://kit.fontawesome.com/2a10a7ed51.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,27 +20,54 @@
         <div class="dev-personal"><img id="dev-portrait" src="assets/images/SelfPortrait.png" /></div>
         <div class="dev-details">
             <div class="dev-details-content">
-                <h1 class="dev-name">ROQUE DANIELLE B. PEREZ</h1>
-                <p class="dev-summary"><i>I'm a backend web developer, but I designed this portfolio myself.</i></p>
+                <h1 class="dev-name">WELCOME</h1>
+                <p class="dev-bio">
+                    <!-- <i>I'm a backend web developer, but I designed this portfolio myself.</i> -->
+                    <i>Recent graduate with a strong passion for web development, aspiring to contribute innovative solutions and learn in a dynamic web development role.</i>
+                </p>
+                <div class="dev-contacts">
+                    <a href="mailto:work.roqueperez@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ginoongr0ki/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/GinoongR0KI" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <nav class="nav">
-        <span class="logo"><a href="#"><img class="dev-logo" src="assets/images/GinoongR0KI Logo.png" alt="Logo"></a></span>
-        <span class="navbar">
+    <nav class="navbar">
+        <span class="nav-logo"><a href="#"><img class="dev-logo" src="assets/images/GinoongR0KI Logo.png" alt="Logo"></a></span>
+        <span class="nav-menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li class="contact"><a href="#Contact">Hire Me!</a></li>
+                <li class="highlighted"><a href="#Projects">Projects & Skills</a></li>
+                <!-- <li class="highlighted"><a href="#Contact">Hire Me!</a></li> -->
             </ul>
         </span>
     </nav>
 
     <section id="Projects">
-        <h2><b>PROJECTS</b></h2>
-        <div class="cont-projects">
-            <div class="project-card">
+        <div class="skills-container">
+            <div class="container-header">
+                <h2><b>SKILLS</b></h2>
+            </div>
+            <div class="container-content">
+                <div class="dev-stack">
+                    <img src="assets/images/techstack/html5.png" alt="HTML5 Logo" />
+                    <img src="assets/images/techstack/css3.png" alt="CSS3 Logo" />
+                    <img src="assets/images/techstack/js.png" alt="JavaScript Logo" />
+                    <img src="assets/images/techstack/bs.png" alt="Bootstrap Logo" />
+                    <img src="assets/images/techstack/jquery.png" alt="jQuery Logo" />
+                    <img src="assets/images/techstack/php.png" alt="PHP Logo" />
+                    <img src="assets/images/techstack/mysql.png" alt="MySQL Logo" />
+                </div>
+            </div>
+            
+        </div>
+        <div class="project-container">
+            <div class="container-header">
+                <h2><b>PROJECTS</b></h2>
+            </div>
+            <!-- <div class="project-card">
                 <div class="project-header">
                     <img src="assets/images/Tensai Screenshot.png" alt="Screenshot of Tensai">
                 </div>
@@ -67,29 +96,45 @@
                         </ul>
                     </div>
                 </div>
+            </div> -->
+            <div class="container-content">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title"><a href="https://www.tensaiedu.online" target="_blank">TENSAI</a>: An Interactive E-Learning Web Application in Science for Grade 1 Students with Voice-Controlled Assistant</h3>
+                        <p class="project-description">This was developed as part of the requirements for ICTC2023 & ICTC2113 courses.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio</h3>
+                        <p class="project-description">This exact portfolio.</p>
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="Contact">
+    <!-- <section id="Contact">
         <div class="card-contact">
             <h1 class="card-title">HIRE ME!</h1>
             <p class="card-content">
-                work.roqueperez@gmail.com
+                
             </p>
         </div>
 
         <div class="cont-placeholder">
             <h1>THIS WEBSITE IS W.I.P.</h1>
         </div>
-    </section>
+    </section> -->
 
     <footer>
         All rights reserved 2023-<p id="copyright-year"> Present</p>.
     </footer>
 
-    <script src="frontend.js" defer></script>
+    <!-- <script src="frontend.js" defer></script> -->
+    <script type="module" src="js/index.js" defer></script>
 
 </body>
 

@@ -1,165 +1,189 @@
+:root {
+    --gr0ki-tm: rgba(152, 131, 106, 1);
+    --gr0ki-color:#706e66;
+    --gr0ki-color2:rgb(40, 40, 40);
+
+}
+
 html {
-    width: 100dvw;
+    width: 100%;
 }
 
 body {
-    padding:0;margin:0;
-    position: relative;
-    overflow-x: hidden;
+    overflow-x:hidden;
+    display: relative;
+    padding:0; margin:0;
 }
 
-/* Navbar settings */
-.nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top:0;
+h1, h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-top: 1px solid var(--gr0ki-color2); border-left: 1px solid var(--gr0ki-color2); border-radius: 25px;
+    width:fit-content;
+    padding:10px;
 
-    /* margin-top:-10vh; */
+    color:var(--gr0ki-color2);
+}
 
-    color:white;
-    /* background-image: linear-gradient(to left, #706e66, #939088); */
-    width:100%;
+/* Nav */
+.navbar {
+    position:-webkit-sticky;
+    position: sticky; top: 0;
 
-    display: flex;
-    align-items: center;
-
+    display: flex; align-items: center;
     transition-duration: 0.69s;
+
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .scrolled {
-    /* background-color: gray;  */
-    color:white; background-image: linear-gradient(to right, rgb(56, 56, 56), rgb(56, 56, 56));
-    /* margin-top: 0; */
-    transition: 0.69s;
-}
-
-.logo {
-    padding: 10px;
+    color:white; background-image: linear-gradient(to right, rgb(39, 38, 38), rgb(56, 56, 56));
+    transition-duration: 0.69s;
 }
 
 .dev-logo {
-    width:5vh; border-radius: 50%;
+    width:5vh; border-radius: 50%; padding:10px;
 }
 
-.navbar {
-    display: flex;
-    align-items: center; justify-content: right;
+.nav-menu {
+    display: flex; justify-content: right; align-items: center;
+}
+
+    /* Nav bar UL */
+.navbar ul {
+    display: flex; align-items: center; justify-content: right;
     width: 100%; padding-right: 10px;
 }
 
-.navbar li {
-    padding:10px;
-    border-radius: 128px;
-    display: inline-block;
-    transition-duration: 0.5s;
+.navbar ul li {
+    padding: 10px; border-radius: 128px;
+    display: inline-block; transition-duration: 0.69s;
 }
 
-.navbar li:hover {
-    color: white; background-color: black;
+.navbar ul li:hover {
+    color: white; background-color:black;
 }
 
-.navbar li:hover a {
-    color: white;
-}
-
-.navbar a, .navbar a:visited {
-    text-decoration: none;
+.navbar ul li:hover a {
     color:white;
 }
 
-.contact, .contact a:visited {
-    background-color: darkgray; color:white;
+.navbar a, .navbar a:visited {
+    color:white;
+    text-decoration: none;
 }
 
-/* Navbar settings */
+.navbar .highlighted, .navbar .highlighted a:visited {
+    background-color:darkgray; color:var(--gr0ki-color2);
+}
+
+.navbar .highlighted:hover a {
+    color:white;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center; justify-content: start;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center; justify-content: end;
+    width:100%;
+}
+
+/* Header */
 
 #Header {
     position:relative;
     display:grid;
     width:100%;
     /* background-color: #706e66; */
-    background-image: linear-gradient(125deg, #706e66, #706e66, rgb(40, 40, 40));
+    background-image: linear-gradient(125deg, var(--gr0ki-color), var(--gr0ki-color), var(--gr0ki-color2));
 
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
+
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.dev-bio {
+    font-family: Arial, Helvetica, sans-serif;
+    text-wrap: balance;
+    padding-right:10px;
+
+    text-align:left;
 }
 
 .dev-personal {
     display: flex;
+    align-items: center; justify-content: end;
     flex-direction: column;
-    align-items:center;
-    justify-content: end;
 }
 
 #dev-portrait {
-    height:90%; width: max-content;
+    height:90%; width:max-content;
 }
 
 .dev-details {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center; justify-content: center;
 }
 
-.dev-summary {
-    color:rgb(181, 181, 181);
+.dev-stack img {
+    width:5vh;
 }
 
-.project-header img {
-    max-width: 50%;
-    border-radius: 50px;
-    
+.dev-contacts, .dev-contacts a, .dev-contacts a:visited {
+    font-size: clamp(50px, 2vw, 2vw); color:white;
+}
+
+.dev-contacts a:hover {
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
 }
 
 /* Projects */
-.project-card {
-    display: grid;
-    grid-template-columns: 3; grid-template-rows: 1;
-}
-.project-header {
-    grid-column: 1;
+#Projects {
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 75%;
+
+    padding: 10px;
+    background-color: var(--gr0ki-color);
 }
 
-.project-content {
-    grid-column: 1;
-}
-
-.project-dropdown {
-    display: none; margin:10px;
-}
-
-.project-button {
-    padding:10px;
-    border-radius:50px;
-    color:black;
-    cursor: pointer;
-}
-
-.project-button:hover {
-    color: white; background-color:black;
-}
-
-/* Contact */
-#Contact {
-    display: flex;
-    justify-content: center; align-items: center;
+.project-container, .skills-container {
+    margin: 1px; padding:10px;
     width: 100%;
-
-    background-color: gray;
 }
 
-.card-contact {
-    border: 1px solid black; border-radius: 8px;
-    width:50%; padding:10px;
+.skills-container {
+    display: flex;
+    align-items: center;
+}
 
-    display: none;
+.project-card {
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px 0px 25px 25px;
+    padding:10px;margin:10px;
+
+    cursor:pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-card:hover {
+    box-shadow: 16px 16px 8px rgba(0, 0, 0, 0.5);
+}
+
+.project-title {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Footer */
 footer {
     display: flex;
-    justify-content: center; align-items: center;
+    align-items: center; justify-content: center;
+
+    color:white; background-image: linear-gradient(to right, rgb(56, 56, 56), rgb(56, 56, 56));
+    font-family: Arial, Helvetica, sans-serif;
 }
