@@ -8,19 +8,17 @@ const navbar = new NavBar();
 
 // Sections
 const section_header = new Section("#Header");
+const section_about = new Section("#About");
 const section_projects = new Section("#Projects");
-// const section_contact = new Section("#Contact");
 
     // Set heights
 section_header.setHeight("100dvh");
-section_projects.setHeight("100dvh");
 
-// section_projects.setHeight("100dvh");
+section_about.setPadding(3, navbar.getHeight()+"px");
+
+section_projects.setHeight("100dvh");
 section_projects.setPadding(1, navbar.getHeight() + "px"); // Bottom Padding
 section_projects.setPadding(3, navbar.getHeight() + "px"); // Top Padding
-console.log(section_projects.obj.style.paddingBottom);
-
-// section_contact.setHeight("100dvh");
 
 function runOnScroll() {
     if (document.documentElement.scrollTop > 2) {
