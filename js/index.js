@@ -16,8 +16,8 @@ section_header.setHeight("100dvh");
 
 section_about.setPadding(3, navbar.getHeight()+"px");
 
-section_projects.setHeight("100dvh");
-section_projects.setPadding(1, navbar.getHeight() + "px"); // Bottom Padding
+// section_projects.setHeight("100dvh");
+// section_projects.setPadding(1, navbar.getHeight() + "px"); // Bottom Padding
 section_projects.setPadding(3, navbar.getHeight() + "px"); // Top Padding
 
 function runOnScroll() {
