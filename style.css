@@ -150,13 +150,7 @@ h1, h2 {
 
 .skills-container {
     display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-@media only screen and (max-width: 767px) {
-    .skills-container {
-        grid-template-columns: 100%;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 :where(.skills-container) .container-header {
@@ -178,6 +172,7 @@ h1, h2 {
     padding: 1px 50px 1px 10px;
     margin:0px;
     width: clamp(232px, 25vw, 25vw);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
 }
 
