@@ -12,6 +12,10 @@ export class Section {
         console.log("height set to: " + height);
     }
 
+    getHeight () {
+        return this.obj.offsetHeight;
+    }
+
     setPadding (direction = 4, padding) {
         switch (direction) {
             case 0:

@@ -157,15 +157,15 @@ h1, h2 {
     padding:10px;
 }
 
+:where(.skills-container .container-header) p {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Projects */
 #Projects, #About {
     background-color: var(--gr0ki-color);
 }
-
-/* .project-container, .skills-container {
-    margin: 1px; padding:10px;
-    width: 100%;
-} */
 
 :where(.project-container) .container-header {
     background-color: gray;
@@ -181,17 +181,30 @@ h1, h2 {
     padding:0px; margin:0px;
 
     display: flex; flex-flow: column wrap;
-    flex: 3 0 100vh;
-    width:100%;
+    justify-content: flex-start;
+    flex-grow: 1;
+    min-height:100vh;
 }
 
-:where(.project-container .container-content) .project-card {
-    width:45vw;
+:where(.project-container .container-content) .project {
+    border: 4px dashed rgb(113, 113, 113);
+    border-top: none;
+    border-radius: 50px 0px 50px 50px;
+    padding:10px;margin:10px;
+    width:45vw; min-height: 90vh;
+}
+
+:where(.project-container .container-content .project) .project-card {
+    padding-right: 10px; margin-right:10px;
 }
 
 @media only screen and (max-width:767px) {
+    :where(.project-container .container-content) .project {
+        width:87dvw;
+    }
+
     :where(.project-container .container-content) .project-card {
-        width: 90%;
+        width: 90%; 
     }
 }
 
