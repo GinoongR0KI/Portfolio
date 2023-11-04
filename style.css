@@ -110,6 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dev-portrait {
+    display: grid;
+    align-items: end; justify-items: center;
 }
 
 .dev-portrait img {
