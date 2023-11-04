@@ -19,11 +19,13 @@
 html {
     font-family: 'Roboto Condensed', sans-serif;
 
-    color: var(--groki-color-major); background-color: var(--groki-color-main);
+    color: var(--groki-color-major); 
+    /* background-color: var(--groki-color-main); */
     
     padding: 0; margin: 0;
 
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -41,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     /* background-color: var(--groki-color-main); */
     margin: 0; padding: var(--padding-thin) 0px;
 
+
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -49,11 +52,19 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-rows: 1fr;
 
     position: relative;
-    z-index: 1;
+    z-index: 11;
 
     transition-duration: 0.69s;
 
     /* Adjust margin-top to offsetHeight in JavaScript */
+}
+
+#Navbar.scrolled {
+    position: sticky; top:0;
+
+    background-image: linear-gradient(to right, var(--groki-color-cta), var(--groki-color-main));
+
+    transition-duration: 0.69s;
 }
 
 .site-logo {
@@ -345,6 +356,8 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Footer */
 footer {
+    background-color: var(--groki-color-main);
+    filter: drop-shadow(0px 0px 8px var(--groki-color-main-alpha));
     padding: var(--padding-wide) var(--padding-default); margin: 0;
 
     display: -ms-grid;
