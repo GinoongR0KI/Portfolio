@@ -1,0 +1,299 @@
+nav {
+    background: var(--bg-color-minimal) !important;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-30);
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.4);
+}
+
+.button {
+    background:none; border: none;
+    color: var(--bg-color-light);
+}
+
+.button:hover {
+    filter: drop-shadow(0px 0px 8px black);
+}
+
+:has(.button) .cta {
+    background-color: var(--color-10);
+    border-radius: 25px 0px 25px 25px;
+    color: white;
+    padding:var(--padding-default);
+}
+
+:has(.button) .cta:last-child {
+    background-color:var(--color-10);
+}
+
+#Project-Controls {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.project-details-container {
+    display: flex;
+}
+
+#project-title {
+    color: var(--bg-color-light);
+    margin-left: var(--margin-default);
+}
+
+.cta-container {
+    display: flex; align-items: center; justify-content: end;
+    column-gap: 10px;
+}
+
+.cta-container:last-child {
+    margin-right: var(--margin-default);
+}
+
+/* :where(.cta-container) .tools {
+    margin-left: var(--margin-default);
+} */
+
+/* :where(.cta-container) .saving {
+    display: flex;
+    align-items: center; justify-content: end;
+} */
+
+/* Cards */
+
+.card-container {
+    background-color: var(--bg-color-light);
+
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh; max-width: 100%;
+    overflow-x: auto; overflow-y: hidden;
+
+    scroll-behavior:smooth;
+}
+
+.card-container::-webkit-scrollbar {
+    height:10px;
+}
+
+.card-container::-webkit-scrollbar-track {
+    background: var(--bg-color-light-container);
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background: var(--color-30-1);
+    border-radius: 25px;
+}
+
+.card {
+    display: flex;
+    align-items: start; justify-content: center;
+
+    width: clamp(100px, 256px, 256px);
+    color:white;
+    /* background-color: rgb(71, 33, 33); */
+    margin: var(--margin-default);
+
+    transition-duration: 0.2s;
+
+    position: relative;
+}
+
+.card-wrapper {
+    /* background-color: gray; */
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 256px;
+}
+
+.card-wrapper:is(.created) {
+    background: rgb(4, 255, 0);
+    filter: drop-shadow(0px 0px 16px rgb(53, 173, 51));
+    animation-name: created;
+    animation-duration: 0.2s;
+
+    width: 256px; height: calc(256px + 100px);
+}
+
+@keyframes created {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.card-wrapper:is(.deleted) {
+    background: rgb(255, 0, 0);
+    filter: drop-shadow(0px 0px 16px rgba(236, 19, 19, 1));
+    animation-name: deleted;
+    animation-duration: 0.5s;
+
+    width: 256px;
+
+    position:relative;
+    z-index: 101;
+}
+
+@keyframes deleted {
+    /* from {
+        background: rgb(255, 0, 0);
+        filter: drop-shadow(0px 0px 16px rgba(236, 19, 19, 1));
+    }
+    to {width:0px;} */
+    from {
+        transform: scale(1) rotate(0);
+        background: rgb(255, 0, 0);
+        filter: drop-shadow(0px 0px 16px rgba(236, 19, 19, 1));
+    }
+    to {
+        transform: scale(0) rotate(90deg);
+        background: rgb(255, 0, 0);
+        filter: drop-shadow(0px 0px 16px rgba(236, 19, 19, 1));
+    }
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-30);
+    padding:var(--padding-default);
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    /* max-height: 4rem; */
+}
+
+.card-title {
+    /* text-wrap: wrap; */
+    /* overflow-wrap: break-word; */
+    /* word-break: break-all; */
+    /* width:256px; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+:is([data-roki-card-title]) .card-body  {
+    background-color: beige;
+    /* width: clamp(100px, 256px, 256px); */
+    width: 256px;
+    /* min-width: 100px; max-width: 256px; */
+    min-height: 256px; height: calc(100% - 128px);
+    background-color: var(--bg-color-light-container);
+    overflow-y: auto; overflow-x: hidden;
+    resize: vertical;
+
+    display: flex;
+    align-items: center; justify-content: start;
+    flex-direction: column;
+    flex-grow: 1;
+
+    scroll-behavior: smooth;
+
+    scrollbar-track-color: black;
+}
+
+.card-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: var(--bg-color-light-container);
+}
+
+.card-body::-webkit-scrollbar-corner {
+    background: var(--bg-color-light-container);
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: var(--color-30-1);
+    border-radius: 25px;
+}
+
+:is([data-roki-card-title]) .cta {
+    background: var(--color-10) !important;
+    /* border: 4px dashed var(--color-10); */
+    width: calc(100% - 10px);
+    margin-top: auto; margin-bottom: var(--margin-default);
+}
+
+:is([data-roki-card-title]) .cta:hover {
+    filter: drop-shadow(0px 0px 16px var(--color-30));
+}
+
+
+
+:where(.card-header) .card-cta {
+    margin-left: auto;
+}
+
+.card-item {
+    background-color:var(--color-30-1); color:black;
+    margin: var(--margin-default); padding: var(--padding-default);
+    border-radius: 8px;
+    height: clamp(1.2rem, auto, auto); max-width: calc(100% - 20px * 2); width: calc(100% - 10px);
+    text-wrap: wrap;
+}
+
+.card-item-cta {
+    display: flex;
+    justify-content: end;
+}
+
+#btn_addCard {
+    border: 1px dashed black; border-radius: 25px;
+    padding: var(--padding-default); margin: var(--margin-default);
+    color: var(--bg-color-dark);
+    
+    /* align-self: start; */
+    min-width: 256px; font-size: 5rem;
+}
+
+/* Modals */
+.modal-container {
+    display: flex;
+    align-items:start; justify-content: center;
+
+    position: fixed;
+    z-index: 100;
+    width:100%; height:100%;
+
+    background-color: rgba(0,0,0,0.5);
+
+    display: none;
+}
+
+.modal-container:focus-within .content {
+    overflow: hidden;
+}
+
+.modal {
+    background-color: white;
+    width:75vw;
+
+    margin-top:25vh;
+
+    border-radius: 25px 0px 25px 25px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+
+    padding: var(--padding-default);
+}
+
+.modal-header button {
+    margin-left:auto; margin-right: var(--margin-default);
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: var(--padding-default);
+}
