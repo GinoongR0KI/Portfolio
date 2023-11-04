@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 .dev-portrait img {
     width: -webkit-fit-content;
     width: -moz-fit-content;
-    width: fit-content; height:100vh;
+    width: fit-content; height: 100dvh;
 }
 
 .dev-summary {
