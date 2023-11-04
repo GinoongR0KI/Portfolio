@@ -5,6 +5,16 @@
 
 }
 
+@media only screen and (max-width:767px) {
+    :where(.project-container .container-content) .project {
+        width:87dvw;
+    }
+
+    :where(.project-container .container-content) .project-card {
+        width: 90%; 
+    }
+}
+
 html {
     width: 100%;
     overflow-x: hidden;
@@ -138,7 +148,7 @@ h1, h2 {
 }
 
 #dev-portrait {
-    height:90%; width:max-content;
+    height:90%; width:auto;
 }
 
 .dev-details {
@@ -148,6 +158,7 @@ h1, h2 {
 
 .dev-contacts, .dev-contacts a, .dev-contacts a:visited {
     font-size: clamp(50px, 2vw, 2vw); color:white;
+    text-decoration: none;
 }
 
 .dev-contacts a:hover {
@@ -267,16 +278,6 @@ h1, h2 {
 :where(.project-container .container-content .project) .project-card {
     padding-right: 10px; margin-right:10px;
     color: var(--gr0ki-color2);
-}
-
-@media only screen and (max-width:767px) {
-    :where(.project-container .container-content) .project {
-        width:87dvw;
-    }
-
-    :where(.project-container .container-content) .project-card {
-        width: 90%; 
-    }
 }
 
 .project-card {

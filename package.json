@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "This project is created to serve as a personal dev portfolio.",
+  "main": "frontend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GinoongR0KI/GinoongR0KI.github.io.git"
+  },
+  "keywords": [],
+  "author": "GinoongR0KI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GinoongR0KI/GinoongR0KI.github.io/issues"
+  },
+  "homepage": "https://github.com/GinoongR0KI/GinoongR0KI.github.io#readme"
+}
