@@ -332,12 +332,13 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center; justify-items: center;
 }
 
-.project-thumbnail {
-    width: 100%; height: 168px;
+.project-thumbnail img {
+    width:100%; height: auto;
+
 }
 
 .project-thumbnail:is([data-roki-project="Kanban"]) {
-    background-image: url("assets/images/project thumbnails/Kanban.png");
+    /* background-image: url("assets/images/project thumbnails/Kanban.png"); */
     background-repeat: no-repeat; background-size: 100%;
     background-clip: content-box;
     background-position-x: center;
@@ -346,7 +347,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-thumbnail:is([data-roki-project="TENSAI"]) {
-    background-image: url("assets/images/project thumbnails/TENSAI.png");
+    /* background-image: url("assets/images/project thumbnails/TENSAI.png"); */
     background-repeat: no-repeat; background-size: 100%;
     background-clip: content-box;
     background-position-x: center;
@@ -476,20 +477,6 @@ footer {
 }
 
 /* Media Queries */
-@media (min-width: 375px) {
-    /* Projects */
-    .project-thumbnail {
-        width: 100%; height: 188px;
-    }
-}
-
-@media (min-width: 425px) {
-    /* Projects */
-    .project-thumbnail {
-        width: 100%; height: 216px;
-    }
-}
-
 @media (min-width:768px) {
 
     /* Header */
@@ -542,11 +529,6 @@ footer {
     .dev-stack img {
         width: 64%;
     }
-
-    /* Projects */
-    .project-thumbnail {
-        width: 100%; height: 408px;
-    }
 }
 
 @media (min-width: 1024px) {
@@ -594,10 +576,6 @@ footer {
     /* Projects */
     .card-content {
         font-size: 1.5rem;
-    }
-    
-    .project-thumbnail {
-        width: 100%; height: 554px;
     }
 
     /* Footer */
@@ -663,18 +641,5 @@ footer {
     
     .card-header .project-info {
         font-size: 2rem;
-    }
-
-    .project-thumbnail {
-        background-color: #00C9AC;
-        width: 100%; height: 718px;
-    }
-}
-
-@media (min-width: 2560px) {
-    /* Projects */
-    .project-thumbnail {
-        background-color: #00C9AC;
-        width: 100%; height: 1416px;
     }
 }
