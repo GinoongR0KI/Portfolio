@@ -1,4 +1,4 @@
-import { Toast } from "./js/Toast";
+import { Toast } from "./js/Toast.js";
 
 // Scroll
 let navbar = document.querySelector("#Navbar");
