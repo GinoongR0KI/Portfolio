@@ -19,6 +19,9 @@
 </head>
 <body>
 
+    <div class="toast">
+    </div>
+
     <div class="content">
 
         <section id="Header">
@@ -88,11 +91,20 @@
                             <img src="assets/images/project thumbnails/Kanban.png" alt="Kanban Thumbnail">
                         </div>
 
-                        <div class="project-description">
-                            Work-In-Progress Project: This project is created to showcase my growth in being able to develop Web Applications independently.
+                        <div class="card-descriptions .shown" data-roki-special-id="kanban">
+                            <div class="project-description">
+                                Work-In-Progress Project: This project is created to showcase my growth in being able to develop Web Applications.
+                            </div>
+    
+                            <div class="project-truth-card">
+                                Not really; I made this project because I don't have a whiteboard, I can't find some papers, and I need somewhere to put my notes in.
+                            </div>
                         </div>
 
-                        <a class="button" href="https://GinoongR0KI.github.io/Kanban/" target="_blank">View Project</a>
+                        <div class="project-buttons-container">
+                            <a class="button" href="https://GinoongR0KI.github.io/Kanban/" target="_blank">View Project</a>
+                            <button class="button" data-target-element="kanban" data-roki-tag="viewtruth">View Truth</button>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
@@ -109,11 +121,21 @@
                             <img src="assets/images/project thumbnails/TENSAI.png" alt="Tensai Thumbnail">
                         </div>
 
-                        <div class="project-description">
-                            Capstone project entitled "TENSAI: An Interactive E-Learning Web Application in Science for Grade 1 Students with Voice-Controlled Assistant" developed to fulfill the requirements for the subjects ICTC2023 and ICTC2113.
+
+                        <div class="card-descriptions .shown" data-roki-special-id="tensai">
+                            <div class="project-description">
+                                Capstone project entitled "TENSAI: An Interactive E-Learning Progressive Web Application in Science for Grade 1 Students with Voice-Controlled Assistant" developed to fulfill the requirements for the subjects ICTC2023 and ICTC2113.
+                            </div>
+    
+                            <div class="project-truth-card">
+                                Disclaimer: I wrote the backend scripts on the capstone project. The frontend I tweaked was based from the code my fellow researchers provided me. Looking back at its code, I know I grew my skills because I can now see some things that I know I could improve.
+                            </div>
                         </div>
 
-                        <a class="button" href="https://tensaiedu.online/" target="_blank">View Project</a>
+                        <div class="project-buttons-container">
+                            <a class="button" href="https://tensaiedu.online/" target="_blank">View Project</a>
+                            <button class="button" data-target-element="tensai" data-roki-tag="viewtruth">View Truth</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,7 +192,7 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
     
 </body>
 </html>
